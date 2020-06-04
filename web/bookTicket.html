@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book Tickets</title>
+    </head>
+    <body>
+        <form name="BookTickets" id="mainform" method="post" action="bookSeat.jsp">
+            <h1>Book Ticket</h1>
+            <label>Flight Number:</label>
+            <input type="number" id="flightId" name="flightId" placeholder="E.g. 1, 2,etc.">
+            <br><br><br>
+            <label>Username:</label>
+            <input type="text" id="username" name="Username">
+            <br><br>
+            <button type="button" onclick="check()">Submit</button>
+        </form>
+        <br>
+        <a href = "bookTicket.html">Book Flights</a><br>
+        <a href = "seatAvailable.html">Available Tickets</a><br>
+        <a href = "scheduleFlight.html">Add Flight</a>
+        <script type="text/javascript">
+            function check(){
+                var username = document.getElementById("username");
+                if(username.value.length == 0) {
+                    alert("Fill The correct username")
+                } else {
+                    document.getElementById('mainform').submit();
+                }
+            }
+        </script>
+    </body>
+</html>

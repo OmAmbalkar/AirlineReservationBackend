@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Flight</title>
+    </head>
+    <body>
+        <form name="CreateFlight" id="mainform" method="post" action="scheduleFlight.jsp">
+            <h1>Create Flight</h1>
+            
+            <label>Flight Number:</label>
+            <input type="number" id="flightId" name="flightId">
+            <br><br><br>
+            <label>Number Of Seats</label>
+            <input type="number" id="NoOfSeats" name="NumberOfSeats">
+            <br><br>
+            <button type="button" onclick="check()">Submit</button>
+        </form>
+        <br>
+        <a href = "bookTicket.html">Book Flights</a><br>
+        <a href = "seatAvailable.html">Available Tickets</a><br>
+        <a href = "scheduleFlight.html">Add Flight</a><br>
+        <script type="text/javascript">
+            function check(){
+                var seats = document.getElementById("NoOfSeats");
+                if(seats.value.length == 0){
+                    alert("Fill The correct number of seats")
+                }
+                else{
+                    document.getElementById('mainform').submit();
+                }
+            }
+        </script>
+    </body>
+</html>
